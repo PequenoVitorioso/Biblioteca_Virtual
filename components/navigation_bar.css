@@ -1,0 +1,163 @@
+
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+/* Barra de navegação */
+.navigation-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 80px;
+    gap: 32px;
+
+    min-height: 80px;
+    width: 100%;
+
+    background: #FFFFFF;
+    border-bottom: 1px solid #D0E1E8;
+}
+
+/* Logo e nome da biblioteca */
+.brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 36px;
+    height: 36px;
+
+    background: #388BA5;
+    border-radius: 8px;
+}
+
+.book-symbol {
+    color: #FFFFFF;
+    font-size: 20px;
+}
+
+.brand-name {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 22px;
+    line-height: 27px;
+
+    color: #0C293D;
+}
+
+/* Links da navegação */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav-links a {
+    font-size: 15px;
+    font-weight: 500;
+
+    color: #0C293D;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-links a.active {
+    color: #388BA5;
+    font-weight: 700;
+}
+
+/* Busca e perfil */
+.search-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Campo de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    width: 240px;
+    height: 40px;
+    padding: 10px 16px;
+
+    background: #F4F8FA;
+    border: 1px solid #D0E1E8;
+    border-radius: 10px;
+}
+
+.search-icon {
+    color: #506C7A;
+    font-size: 20px;
+}
+
+.search-bar input {
+    width: 100%;
+    min-width: 0;
+
+    border: none;
+    outline: none;
+    background: transparent;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #0C293D;
+}
+
+.search-bar input::placeholder {
+    color: #506C7A;
+}
+
+/* Avatar provisório */
+.avatar-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 40px;
+    height: 40px;
+
+    background: #388BA5;
+    border-radius: 50%;
+
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+
+    flex-shrink: 0;
+}
+
+/* Adaptação para telas menores */
+@media (max-width: 1100px) {
+    .navigation-bar {
+        padding: 0 24px;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .search-bar {
+        width: 200px;
+    }
+}
