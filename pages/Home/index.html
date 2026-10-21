@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minha Estante</title>
   <link rel="stylesheet" href="../../components/navigation_bar.css">
+  <link rel="stylesheet" href="../../components/footer.css">
 </head>
 <body>
   
@@ -20,7 +21,7 @@
     <nav class="nav-links">
         <a href="#" class="active">Início</a>
         <a href="#">Minha Coleção</a>
-        <a href="#">Descobrir</a>
+        <!-- <a href="#">Descobrir</a> -->
         <a href="#">Perfil</a>
     </nav>
 
@@ -161,47 +162,85 @@
 
   <hr>
 
-  <footer>
-    <section>
-      <h2>Minha Estante</h2>
-      <p>
-        O espaço acolhedor e definitivo para registrar sua jornada literária e cinematográfica.
-        Desenvolvido por e para apaixonados por histórias.
-      </p>
-    </section>
+  
+<footer class="footer">
 
-    <section>
-      <h3>Explorar</h3>
-      <ul>
-        <li><a href="#">Minha Estante</a></li>
-        <li><a href="#">Recém Adicionados</a></li>
-        <li><a href="#">Descobertas</a></li>
-        <li><a href="#">Metas de Leitura</a></li>
-      </ul>
-    </section>
+    <!-- Parte principal do rodapé -->
+    <div class="footer-content">
 
-    <section>
-      <h3>Comunidade</h3>
-      <ul>
-        <li><a href="#">Clubes do Livro</a></li>
-        <li><a href="#">Desafios Anuais</a></li>
-        <li><a href="#">Fórum de Discussão</a></li>
-        <li><a href="#">Eventos Virtuais</a></li>
-      </ul>
-    </section>
+        <!-- Logo e descrição -->
+        <section class="footer-brand">
 
-    <section>
-      <h3>Suporte</h3>
-      <ul>
-        <li><a href="#">Central de Ajuda</a></li>
-        <li><a href="#">Privacidade</a></li>
-        <li><a href="#">Termos de Uso</a></li>
-        <li><a href="#">Contato</a></li>
-      </ul>
-    </section>
+            <a href="#" class="footer-logo">
+                <span class="footer-logo-icon">▤</span>
+                <span>Minha Estante</span>
+            </a>
 
-    <p>Minha Estante © 2026. Todos os direitos reservados. Feito com amor por leitores.</p>
-  </footer>
+            <p>
+                O espaço acolhedor e definitivo para registrar sua
+                jornada literária e cinematográfica.
+                Desenvolvido por e para apaixonados por histórias.
+            </p>
+
+        </section>
+
+        <!-- Coluna Explorar -->
+        <section class="footer-column">
+            <h3>Explorar</h3>
+
+            <ul>
+                <li><a href="#">Minha Estante</a></li>
+                <li><a href="#">Recém Adicionados</a></li>
+                <li><a href="#">Descobertas</a></li>
+                <li><a href="#">Metas de Leitura</a></li>
+            </ul>
+        </section>
+
+        <!-- Coluna Comunidade -->
+        <section class="footer-column">
+            <h3>Comunidade</h3>
+
+            <ul>
+                <li><a href="#">Clubes do Livro</a></li>
+                <li><a href="#">Desafios Anuais</a></li>
+                <li><a href="#">Fórum de Discussão</a></li>
+                <li><a href="#">Eventos Virtuais</a></li>
+            </ul>
+        </section>
+
+        <!-- Coluna Suporte -->
+        <section class="footer-column">
+            <h3>Suporte</h3>
+
+            <ul>
+                <li><a href="#">Central de Ajuda</a></li>
+                <li><a href="#">Privacidade</a></li>
+                <li><a href="#">Termos de Uso</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </section>
+
+    </div>
+
+    <!-- Parte inferior do rodapé -->
+    <div class="footer-bottom">
+
+        <p>
+            Minha Estante © 2026. Todos os direitos reservados.
+            Feito com amor por leitores.
+        </p>
+
+        <!-- Redes sociais -->
+        <div class="footer-social">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="YouTube">YT</a>
+            <a href="#" aria-label="Minha coleção">MC</a>
+        </div>
+
+    </div>
+
+</footer>
 
 </body>
 </html>

@@ -1,0 +1,233 @@
+
+/* Rodapé principal */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 80px 80px 40px;
+    gap: 64px;
+
+    width: 100%;
+
+    background: #0C293D;
+    color: #FFFFFF;
+}
+
+/* Conteúdo principal do rodapé */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    width: 100%;
+    gap: 40px;
+}
+
+/* Logo e descrição */
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 24px;
+
+    width: 360px;
+    max-width: 100%;
+}
+
+/* Logo */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    text-decoration: none;
+
+    color: #FFFFFF;
+
+    font-family: 'Fraunces', serif;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 27px;
+}
+
+/* Ícone da logo */
+.footer-logo-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    background: #388BA5;
+    border-radius: 8px;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+}
+
+/* Descrição da biblioteca */
+.footer-brand p {
+    margin: 0;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 160%;
+
+    color: #9BC1D9;
+}
+
+/* Colunas de links */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 16px;
+}
+
+/* Títulos das colunas */
+.footer-column h3 {
+    margin: 0;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 19px;
+
+    text-transform: uppercase;
+    color: #FF9C03;
+}
+
+/* Listas */
+.footer-column ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Links */
+.footer-column a {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+
+    color: #FFFFFF;
+    opacity: 0.8;
+
+    text-decoration: none;
+}
+
+/* Efeito ao passar o mouse */
+.footer-column a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+/* Parte inferior do rodapé */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    gap: 24px;
+
+    padding-top: 32px;
+
+    border-top: 1px solid rgba(155, 193, 217, 0.2);
+}
+
+/* Direitos autorais */
+.footer-bottom p {
+    margin: 0;
+
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+
+    color: #9BC1D9;
+    opacity: 0.6;
+}
+
+/* Redes sociais */
+.footer-social {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Botões das redes sociais */
+.footer-social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 36px;
+    height: 36px;
+
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+
+    color: #FFFFFF;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+}
+
+/* Efeito ao passar o mouse */
+.footer-social a:hover {
+    background: #388BA5;
+}
+
+/* Adaptação para telas menores */
+@media (max-width: 1100px) {
+    .footer {
+        padding: 60px 24px 32px;
+        gap: 48px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .footer-brand {
+        width: 100%;
+    }
+
+    .footer-column {
+        min-width: 130px;
+    }
+}
+
+/* Adaptação para celulares */
+@media (max-width: 600px) {
+    .footer {
+        padding: 40px 20px 24px;
+        gap: 40px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+}
