@@ -1,3 +1,4 @@
+<!-- HTML of Minha Estante -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -30,6 +31,26 @@
         <span class="search-icon" aria-hidden="true">⌕</span>
         <input type="search" name="busca" placeholder="Buscar na biblioteca..." aria-label="Buscar na biblioteca">
       </label>
+      <div class="filter-controls">
+
+        <!-- Filtro de Categorias -->
+        <select id="filter-category" aria-label="Filtrar por categoria">
+          <option value="all">Todas as categorias</option>
+          <option value="livro">Livro</option>
+          <option value="contos">Contos</option>
+          <option value="filme">Filme</option>
+          <option value="drama">Drama</option>
+          <option value="clássicos">Clássicos</option>
+          <option value="absurdo">Absurdo</option>
+        </select>
+
+        <!-- Ordenação -->
+        <select id="filter-sort" aria-label="Ordenar resultados">
+          <option value="default">Ordem padrão</option>
+          <option value="title-asc">Título (A-Z)</option>
+          <option value="title-desc">Título (Z-A)</option>
+        </select>
+      </div>
       <a href="../Profile/index.html" class="avatar-wrapper" aria-label="Meu perfil"><span>PV</span></a>
     </div>
   </header>
@@ -145,7 +166,7 @@
 
       <div class="collection-more">
         <button type="button">
-          Ver coleção completa (265 itens)
+          Ver coleção completa (0 itens)
           <span>↓</span>
         </button>
       </div>
