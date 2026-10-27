@@ -1,3 +1,4 @@
+<!-- HTML of the Discover page -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -30,6 +31,27 @@
         <span class="search-icon" aria-hidden="true">⌕</span>
         <input type="search" name="busca" placeholder="Buscar na biblioteca..." aria-label="Buscar na biblioteca">
       </label>
+
+      <div class="filter-controls">
+        <!-- Filtro de Categorias -->
+        <select id="filter-category" aria-label="Filtrar por categoria">
+          <option value="all">Todas as categorias</option>
+          <option value="literatura">Literatura</option>
+          <option value="contos">Contos</option>
+          <option value="cinema">Cinema</option>
+          <option value="drama">Drama</option>
+          <option value="clássicos">Clássicos</option>
+          <option value="absurdo">Absurdo</option>
+        </select>
+
+        <!-- Ordenação -->
+        <select id="filter-sort" aria-label="Ordenar resultados">
+          <option value="default">Ordem padrão</option>
+          <option value="title-asc">Título (A-Z)</option>
+          <option value="title-desc">Título (Z-A)</option>
+        </select>
+      </div>
+
       <a href="../Profile/index.html" class="avatar-wrapper" aria-label="Meu perfil"><span>PV</span></a>
     </div>
   </header>
@@ -82,6 +104,118 @@
               <button class="add-button" type="button" aria-pressed="false">Adicionar à Lista <span aria-hidden="true">+</span></button>
             </div>
           </article>
+          <!-- Cartão 4: Torto Arado -->
+          <article class="recommendation-card">
+            <div class="recommendation-visual recommendation-visual-book">
+              <img src="../../Images/Discover/torto-arado.jpg" alt="Capa do livro Torto Arado de Itamar Vieira Junior">
+            </div>
+            <div class="recommendation-content">
+              <div class="tags"><span>Literatura</span><span>Romance</span></div>
+              <h2>Torto Arado</h2>
+              <p class="creator">Itamar Vieira Junior</p>
+              <p class="description">Uma história marcante sobre duas irmãs no sertão baiano e as marcas da terra e do trabalho.</p>
+              <button class="add-button" type="button" aria-pressed="false">Adicionado à Lista <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <!-- Cartão 5: Central do Brasil -->
+          <article class="recommendation-card">
+            <div class="recommendation-visual">
+              <img src="../../Images/Discover/central-do-brasil.jpg" alt="Cena do filme Central do Brasil">
+            </div>
+            <div class="recommendation-content">
+              <div class="tags"><span>Cinema</span><span>Drama</span></div>
+              <h2>Central do Brasil</h2>
+              <p class="creator">Walter Salles</p>
+              <p class="description">Uma jornada emocionante pelo interior do Brasil em busca de reconexão e esperança.</p>
+              <button class="add-button" type="button" aria-pressed="false">Adicionado à Lista <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <!-- Cartão 6: O Alienista -->
+          <article class="recommendation-card">
+            <div class="recommendation-visual recommendation-visual-book">
+              <img src="../../Images/Discover/o-alienista.png" alt="Capa da obra O Alienista de Machado de Assis">
+            </div>
+            <div class="recommendation-content">
+              <div class="tags"><span>Clássicos</span><span>Contos</span></div>
+              <h2>O Alienista</h2>
+              <p class="creator">Machado de Assis</p>
+              <p class="description">Uma sátira genial e atemporal sobre a razão, a loucura e as fragilidades da mente humana.</p>
+              <button class="add-button" type="button" aria-pressed="false">Adicionado à Lista <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <!-- Cartão 7: O Auto da Compadecida -->
+          <article class="recommendation-card">
+            <div class="recommendation-visual">
+              <img src="../../Images/Discover/o-auto-da-compadecida.jpg" alt="Cena do filme O Auto da Compadecida">
+            </div>
+            <div class="recommendation-content">
+              <div class="tags"><span>Cinema</span><span>Comédia</span></div>
+              <h2>O Auto da Compadecida</h2>
+              <p class="creator">Guel Arraes</p>
+              <p class="description">As aventuras astutas de João Grilo e Chicó que enfrentam os poderosos e o próprio diabo no sertão.</p>
+              <button class="add-button" type="button" aria-pressed="false">Adicionado à Lista <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <!-- Cartão: Grande Sertão: Veredas -->
+          <article class="recommendation-card">
+            <div class="recommendation-visual recommendation-visual-book">
+              <img src="../../Images/Discover/grande-sertao-veredas.jpg" alt="Capa do livro Grande Sertão: Veredas de Guimarães Rosa">
+            </div>
+            <div class="recommendation-content">
+              <div class="tags"><span>Literatura</span><span>Romance</span></div>
+              <h2>Grande Sertão: Veredas</h2>
+              <p class="creator">João Guimarães Rosa</p>
+              <p class="description">Um mergulho profundo no sertão mineiro através do monólogo de Riobaldo sobre amor, violência e existência.</p>
+              <button class="add-button" type="button" aria-pressed="false">Adicionar à Lista <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <!-- Cartão: Cidade de Deus -->
+          <article class="recommendation-card">
+            <div class="recommendation-visual">
+              <img src="../../Images/Discover/cidade-de-deus.jpg" alt="Cena do filme Cidade de Deus">
+            </div>
+            <div class="recommendation-content">
+              <div class="tags"><span>Cinema</span><span>Drama</span></div>
+              <h2>Cidade de Deus</h2>
+              <p class="creator">Fernando Meirelles e Kátia Lund</p>
+              <p class="description">A trajetória de jovens no Rio de Janeiro acompanhada pelo olhar do fotógrafo Buscapé.</p>
+              <button class="add-button" type="button" aria-pressed="false">Adicionar à Lista <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <!-- Cartão: Capitães da Areia -->
+          <article class="recommendation-card">
+            <div class="recommendation-visual recommendation-visual-book">
+              <img src="../../Images/Discover/capitaes-da-areia.jpg" alt="Capa do livro Capitães da Areia de Jorge Amado">
+            </div>
+            <div class="recommendation-content">
+              <div class="tags"><span>Literatura</span><span>Romance</span></div>
+              <h2>Capitães da Areia</h2>
+              <p class="creator">Jorge Amado</p>
+              <p class="description">A vida de um grupo de crianças abandonadas que sobrevivem nas ruas de Salvador.</p>
+              <button class="add-button" type="button" aria-pressed="false">Adicionar à Lista <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+
+          <!-- Cartão: Bacurau -->
+          <article class="recommendation-card">
+            <div class="recommendation-visual">
+              <img src="../../Images/Discover/bacurau.jpg" alt="Cena do filme Bacurau">
+            </div>
+            <div class="recommendation-content">
+              <div class="tags"><span>Cinema</span><span>Suspense</span></div>
+              <h2>Bacurau</h2>
+              <p class="creator">Kleber Mendonça Filho e Juliano Dornelles</p>
+              <p class="description">Os moradores de um pequeno povoado no sertão brasileiro descobrem que a comunidade sumiu dos mapas.</p>
+              <button class="add-button" type="button" aria-pressed="false">Adicionar à Lista <span aria-hidden="true">+</span></button>
+            </div>
+          </article>
+          
         </div>
       </div>
     </section>
