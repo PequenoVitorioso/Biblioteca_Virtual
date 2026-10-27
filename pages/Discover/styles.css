@@ -56,6 +56,17 @@ main button { font: inherit; }
   box-shadow: 0 9px 24px rgba(12, 41, 61, .035);
 }
 
+.recommendation-card[hidden],
+.no-results-message[hidden] { display: none; }
+
+.no-results-message {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 36px 0;
+  color: var(--color-muted);
+  text-align: center;
+}
+
 .recommendation-visual {
   height: 210px;
   overflow: hidden;

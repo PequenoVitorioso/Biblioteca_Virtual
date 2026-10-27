@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="../../css/footer.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="../../css/page_layout.css">
+  <link rel="stylesheet" href="../../css/interactions.css">
+  <script src="../../js/library-state.js" defer></script>
+  <script src="../../js/site.js" defer></script>
   <script src="filters.js" defer></script>
   <title>Minha Coleção | Minha Estante</title>
 </head>
@@ -49,6 +52,23 @@
           <button type="button" data-filter="film" aria-pressed="false">Filmes</button>
           <button type="button" data-filter="wishlist" aria-pressed="false">Desejos</button>
         </div>
+      </div>
+
+      <div class="collection-controls">
+        <label for="filter-category">Categoria</label>
+        <select id="filter-category">
+          <option value="all">Todas</option>
+          <option value="book">Livros</option>
+          <option value="film">Filmes</option>
+          <option value="done">Lidos e assistidos</option>
+          <option value="wishlist">Desejos</option>
+        </select>
+        <label for="filter-sort">Ordenar</label>
+        <select id="filter-sort">
+          <option value="default">Ordem padrão</option>
+          <option value="title-asc">Título (A–Z)</option>
+          <option value="title-desc">Título (Z–A)</option>
+        </select>
       </div>
 
       <div class="collection-grid">
@@ -145,8 +165,8 @@
 
       <div class="collection-more">
         <button type="button">
-          Ver coleção completa (265 itens)
-          <span>↓</span>
+          Descobrir mais obras
+          <span>↗</span>
         </button>
       </div>
     </section>

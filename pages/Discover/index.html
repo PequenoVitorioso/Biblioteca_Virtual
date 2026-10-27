@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="../../css/footer.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="../../css/page_layout.css">
+  <link rel="stylesheet" href="../../css/interactions.css">
+  <script src="../../js/library-state.js" defer></script>
+  <script src="../../js/site.js" defer></script>
+  <script src="../../js/progress.js" defer></script>
   <script src="discover.js" defer></script>
 </head>
 <body>
@@ -42,6 +46,9 @@
           <option value="drama">Drama</option>
           <option value="clássicos">Clássicos</option>
           <option value="absurdo">Absurdo</option>
+          <option value="romance">Romance</option>
+          <option value="comédia">Comédia</option>
+          <option value="suspense">Suspense</option>
         </select>
 
         <!-- Ordenação -->
@@ -114,7 +121,7 @@
               <h2>Torto Arado</h2>
               <p class="creator">Itamar Vieira Junior</p>
               <p class="description">Uma história marcante sobre duas irmãs no sertão baiano e as marcas da terra e do trabalho.</p>
-              <button class="add-button" type="button" aria-pressed="false">Adicionado à Lista <span aria-hidden="true">+</span></button>
+              <button class="add-button" type="button" aria-pressed="false">Adicionar à Lista <span aria-hidden="true">+</span></button>
             </div>
           </article>
 
@@ -128,7 +135,7 @@
               <h2>Central do Brasil</h2>
               <p class="creator">Walter Salles</p>
               <p class="description">Uma jornada emocionante pelo interior do Brasil em busca de reconexão e esperança.</p>
-              <button class="add-button" type="button" aria-pressed="false">Adicionado à Lista <span aria-hidden="true">+</span></button>
+              <button class="add-button" type="button" aria-pressed="false">Adicionar à Lista <span aria-hidden="true">+</span></button>
             </div>
           </article>
 
@@ -142,7 +149,7 @@
               <h2>O Alienista</h2>
               <p class="creator">Machado de Assis</p>
               <p class="description">Uma sátira genial e atemporal sobre a razão, a loucura e as fragilidades da mente humana.</p>
-              <button class="add-button" type="button" aria-pressed="false">Adicionado à Lista <span aria-hidden="true">+</span></button>
+              <button class="add-button" type="button" aria-pressed="false">Adicionar à Lista <span aria-hidden="true">+</span></button>
             </div>
           </article>
 
@@ -156,7 +163,7 @@
               <h2>O Auto da Compadecida</h2>
               <p class="creator">Guel Arraes</p>
               <p class="description">As aventuras astutas de João Grilo e Chicó que enfrentam os poderosos e o próprio diabo no sertão.</p>
-              <button class="add-button" type="button" aria-pressed="false">Adicionado à Lista <span aria-hidden="true">+</span></button>
+              <button class="add-button" type="button" aria-pressed="false">Adicionar à Lista <span aria-hidden="true">+</span></button>
             </div>
           </article>
 
@@ -229,7 +236,7 @@
         </div>
 
         <div class="progress-grid">
-          <article class="progress-card" data-progress-card data-current="164" data-total="320" data-unit="page">
+          <article class="progress-card" data-progress-card data-progress-key="reading" data-total="320">
             <div class="mini-cover mini-cover-book" aria-hidden="true"><img src="../../Images/Discover/quincas-borba.png" alt="Capa do livro Quincas Borba"></div>
             <div class="progress-content">
               <span class="progress-type progress-type-reading">LENDO ATUALMENTE</span>
@@ -241,7 +248,7 @@
             </div>
           </article>
 
-          <article class="progress-card progress-card-film" data-progress-card data-current="55" data-total="93" data-unit="minute">
+          <article class="progress-card progress-card-film" data-progress-card data-progress-key="watching" data-total="93">
             <div class="mini-cover mini-cover-film" aria-hidden="true"><img src="../../Images/Discover/branco-sai-preto-fica.jpg" alt="Capa do filme Branco Sai, Preto Fica"></div>
             <div class="progress-content">
               <span class="progress-type progress-type-watching">ASSISTINDO ATUALMENTE</span>

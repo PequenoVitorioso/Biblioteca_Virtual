@@ -23,7 +23,7 @@ function showProfile(name, bio) {
 }
 
 try {
-  const saved = JSON.parse(localStorage.getItem(storageKey) || 'null');
+  const saved = JSON.parse(sessionStorage.getItem(storageKey) || localStorage.getItem(storageKey) || 'null');
   if (saved && typeof saved === 'object') {
     nameInput.value = typeof saved.name === 'string' ? saved.name.slice(0, 50) : '';
     bioInput.value = typeof saved.bio === 'string' ? saved.bio.slice(0, 160) : '';
@@ -46,8 +46,15 @@ profileForm.addEventListener('submit', (event) => {
 
   try {
     localStorage.setItem(storageKey, JSON.stringify({ name, bio, interests }));
+    sessionStorage.removeItem(storageKey);
     saveStatus.textContent = 'Perfil salvo neste navegador.';
   } catch {
     saveStatus.textContent = 'Perfil atualizado nesta página, mas o navegador não permitiu salvar.';
   }
+});
+
+document.querySelector('#reset-library').addEventListener('click', () => {
+  if (!confirm('Restaurar as obras, desejos e progresso de exemplo neste navegador?')) return;
+  window.Estante.reset();
+  saveStatus.textContent = 'Obras e progresso de exemplo restaurados.';
 });

@@ -9,6 +9,10 @@
   <link rel="stylesheet" href="../../css/footer.css">
   <link rel="stylesheet" href="main.css">
   <link rel="stylesheet" href="../../css/page_layout.css">
+  <link rel="stylesheet" href="../../css/interactions.css">
+  <script src="../../js/library-state.js" defer></script>
+  <script src="../../js/site.js" defer></script>
+  <script src="../../js/progress.js" defer></script>
 </head>
 <body>
   
@@ -68,12 +72,12 @@
             </div>
 
             <div class="hero-actions">
-                <a href="#colecao" class="button-primary">
+                <a href="../Collection/index.html" class="button-primary">
                     Começar agora de graça <span aria-hidden="true">→</span>
                 </a>
 
-                <a href="#como-funciona" class="button-secondary">
-                    Como funciona
+                <a href="../Discover/index.html" class="button-secondary">
+                    Explorar obras
                 </a>
             </div>
 
@@ -123,7 +127,7 @@
 
             <div class="stat-info">
                 <p>Livros lidos</p>
-                <h2>142</h2>
+                <h2>3</h2>
             </div>
         </article>
 
@@ -132,7 +136,7 @@
 
             <div class="stat-info">
                 <p>Filmes assistidos</p>
-                <h2>89</h2>
+                <h2>2</h2>
             </div>
         </article>
 
@@ -141,7 +145,7 @@
 
             <div class="stat-info">
                 <p>Na lista de desejos</p>
-                <h2>34</h2>
+                <h2>1</h2>
             </div>
         </article>
 
@@ -150,7 +154,7 @@
 
             <div class="stat-info">
                 <p>Total na coleção</p>
-                <h2>265</h2>
+                <h2>6</h2>
             </div>
         </article>
 
@@ -250,7 +254,7 @@
 
         <div class="progress-grid">
 
-            <article class="progress-card">
+            <article class="progress-card" data-progress-card data-progress-key="reading" data-total="320">
                 <div class="progress-card-heading">
                     <span class="progress-type">LENDO ATUALMENTE</span>
                     <span class="progress-symbol">▤</span>
@@ -258,7 +262,7 @@
 
                 <h3>Quincas Borba</h3>
                 <p class="progress-author">
-                    Machado de Assis — Pág. 164 de 320
+                    Machado de Assis — <span class="progress-count">Pág. 164 de 320</span>
                 </p>
 
                 <div class="progress-label">
@@ -275,7 +279,7 @@
                 </button>
             </article>
 
-            <article class="progress-card">
+            <article class="progress-card" data-progress-card data-progress-key="watching" data-total="93">
                 <div class="progress-card-heading">
                     <span class="progress-type">ASSISTINDO ATUALMENTE</span>
                     <span class="progress-symbol">▷</span>
@@ -283,7 +287,7 @@
 
                 <h3>Branco Sai, Preto Fica</h3>
                 <p class="progress-author">
-                    Adirley Queirós — 55 min de 93 min
+                    Adirley Queirós — <span class="progress-count">55 min de 93 min</span>
                 </p>
 
                 <div class="progress-label">

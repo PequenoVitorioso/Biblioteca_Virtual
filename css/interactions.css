@@ -1,0 +1,43 @@
+.action-dialog {
+  width: min(calc(100% - 32px), 420px);
+  max-width: 420px;
+  padding: 28px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+  background: var(--color-card);
+  color: var(--color-ink);
+  box-shadow: 0 18px 50px rgba(12, 41, 61, .2);
+}
+
+.action-dialog::backdrop { background: rgba(12, 41, 61, .45); }
+.action-dialog-form { display: grid; gap: 12px; }
+.action-dialog h2 { margin: 0 0 6px; font: 700 25px/1.2 var(--font-display); }
+.action-dialog label { font-size: 14px; font-weight: 700; }
+.action-dialog input {
+  width: 100%;
+  padding: 11px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--button-radius);
+  color: var(--color-ink);
+  font: inherit;
+}
+.action-dialog-hint { margin: 0; color: var(--color-muted); font-size: 13px; }
+.action-dialog-actions { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 10px; margin-top: 10px; }
+.action-dialog-actions button {
+  padding: 10px 14px;
+  border: 1px solid var(--color-primary);
+  border-radius: var(--button-radius);
+  background: #fff;
+  color: var(--color-primary);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.action-dialog-actions .dialog-confirm {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #fff;
+}
+.action-dialog-actions button:focus-visible,
+.action-dialog input:focus-visible { outline: 3px solid #82cce0; outline-offset: 2px; }

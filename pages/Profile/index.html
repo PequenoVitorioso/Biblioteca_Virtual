@@ -9,6 +9,9 @@
   <link rel="stylesheet" href="../../css/footer.css">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="../../css/page_layout.css">
+  <link rel="stylesheet" href="../../css/interactions.css">
+  <script src="../../js/library-state.js" defer></script>
+  <script src="../../js/site.js" defer></script>
   <script src="profile.js" defer></script>
 </head>
 <body>
@@ -65,10 +68,10 @@
           </div>
 
           <div class="stats-grid">
-            <div class="stat-card stat-books"><span class="stat-icon" aria-hidden="true">▤</span><strong>142</strong><span>Livros lidos</span></div>
-            <div class="stat-card stat-films"><span class="stat-icon" aria-hidden="true">▷</span><strong>89</strong><span>Filmes assistidos</span></div>
-            <div class="stat-card stat-wishes"><span class="stat-icon" aria-hidden="true">♡</span><strong>34</strong><span>Na lista de desejos</span></div>
-            <div class="stat-card stat-total"><span class="stat-icon" aria-hidden="true">▣</span><strong>265</strong><span>Itens na coleção</span></div>
+            <div class="stat-card stat-books"><span class="stat-icon" aria-hidden="true">▤</span><strong>3</strong><span>Livros lidos</span></div>
+            <div class="stat-card stat-films"><span class="stat-icon" aria-hidden="true">▷</span><strong>2</strong><span>Filmes assistidos</span></div>
+            <div class="stat-card stat-wishes"><span class="stat-icon" aria-hidden="true">♡</span><strong>1</strong><span>Na lista de desejos</span></div>
+            <div class="stat-card stat-total"><span class="stat-icon" aria-hidden="true">▣</span><strong>6</strong><span>Itens na coleção</span></div>
           </div>
         </section>
 
@@ -82,22 +85,22 @@
           </div>
 
           <div class="activity-list">
-            <article class="activity-card">
+            <article class="activity-card" data-progress-key="reading" data-total="320">
               <div class="activity-symbol reading-symbol" aria-hidden="true">▤</div>
               <div class="activity-content">
                 <div class="activity-top"><span>LENDO AGORA</span><strong>51%</strong></div>
                 <h3>Quincas Borba</h3>
-                <p>Machado de Assis · Página 164 de 320</p>
+                <p>Machado de Assis · <span class="activity-count">Página 164 de 320</span></p>
                 <div class="activity-track"><span style="width: 51%"></span></div>
               </div>
             </article>
 
-            <article class="activity-card">
+            <article class="activity-card" data-progress-key="watching" data-total="93">
               <div class="activity-symbol watching-symbol" aria-hidden="true">▷</div>
               <div class="activity-content">
                 <div class="activity-top"><span>ASSISTINDO AGORA</span><strong>59%</strong></div>
                 <h3>Branco Sai, Preto Fica</h3>
-                <p>Adirley Queirós · 55 de 93 minutos</p>
+                <p>Adirley Queirós · <span class="activity-count">55 de 93 minutos</span></p>
                 <div class="activity-track movie-track"><span style="width: 59%"></span></div>
               </div>
             </article>
@@ -134,6 +137,7 @@
             <p class="save-status" role="status" aria-live="polite"></p>
           </form>
           <p class="storage-note">Os dados do perfil ficam salvos somente neste navegador.</p>
+          <button id="reset-library" type="button">Restaurar obras e progresso de exemplo</button>
         </section>
       </aside>
     </div>
