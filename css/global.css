@@ -1,0 +1,627 @@
+/* ========================================
+   1. VARIÁVEIS GLOBAIS
+   ======================================== */
+
+
+:root {
+    /* Cores principais */
+    --color-primary: #0C293D;
+    --color-secondary: #388BA5;
+    --color-accent: #FF9C03;
+    --color-accent-hover: #FB7100;
+
+/* Cores de texto */
+    --color-text: #0C293D;
+    --color-text-secondary: #506C7A;
+    --color-text-light: #FFFFFF;
+
+/* Fundos */
+    --color-background: #FFFFFF;
+    --color-background-light: #F4F8FA;
+    --color-background-secondary: #E9EFF2;
+
+/* Bordas */
+    --color-border: #D0E1E8;
+    --color-border-focus: #388BA5;
+
+/* Estados */
+    --color-success: #237A52;
+    --color-success-background: #E7F5EC;
+    --color-error: #C0392B;
+    --color-error-background: #FCEBE9;
+    --color-warning: #9A6700;
+    --color-warning-background: #FFF4D6;
+
+/* Tipografia */
+    --font-heading: "Fraunces", Georgia, serif;
+    --font-body: "Manrope", Arial, sans-serif;
+
+/* Espaçamentos */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+
+/* Bordas arredondadas */
+    --radius-sm: 6px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-pill: 999px;
+
+/* Sombras */
+    --shadow-sm: 0 2px 6px rgba(12, 41, 61, 0.06);
+    --shadow-md: 0 6px 18px rgba(12, 41, 61, 0.10);
+
+/* Transições */
+    --transition-default: 0.2s ease;
+}
+
+/* ========================================
+2. CONFIGURAÇÕES GERAIS
+======================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: var(--color-secondary);
+    text-decoration: none;
+    transition: color var(--transition-default);
+}
+
+a:hover {
+    color: var(--color-accent-hover);
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+button,
+select {
+    cursor: pointer;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    color: var(--color-primary);
+    font-family: var(--font-heading);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+p {
+    margin-top: 0;
+    color: var(--color-text-secondary);
+}
+
+ul,
+ol {
+    padding-left: 24px;
+}
+
+/* ========================================
+3. CONTAINERS E LAYOUT
+======================================== */
+
+.container {
+    width: 100%;
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 24px;
+}
+
+.content-section {
+    padding-block: 64px;
+}
+
+.section-title {
+    margin-bottom: var(--spacing-sm);
+    font-size: 32px;
+}
+
+.section-description {
+    max-width: 700px;
+    margin-bottom: var(--spacing-xl);
+    color: var(--color-text-secondary);
+}
+
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-md);
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(min(100%, 240px), 1fr) );
+    gap: var(--spacing-lg);
+}
+
+/* ========================================
+4. BOTÕES
+======================================== */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+
+min-height: 44px;
+    padding: 10px 20px;
+
+border: 1px solid transparent;
+    border-radius: var(--radius-md);
+
+font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+
+transition:
+        background-color var(--transition-default),
+        color var(--transition-default),
+        border-color var(--transition-default),
+        box-shadow var(--transition-default),
+        transform var(--transition-default);
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+/* Botão principal */
+.btn-primary {
+    color: var(--color-text-light);
+    background-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+    color: var(--color-text-light);
+    background-color: #17445F;
+}
+
+/* Botão secundário */
+.btn-secondary {
+    color: var(--color-primary);
+    background-color: var(--color-background);
+    border-color: var(--color-border);
+}
+
+.btn-secondary:hover {
+    color: var(--color-primary);
+    background-color: var(--color-background-light);
+    border-color: var(--color-secondary);
+}
+
+/* Botão de destaque */
+.btn-accent {
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+}
+
+.btn-accent:hover {
+    color: var(--color-primary);
+    background-color: var(--color-accent-hover);
+}
+
+/* Botão apenas com texto */
+.btn-ghost {
+    color: var(--color-secondary);
+    background-color: transparent;
+}
+
+.btn-ghost:hover {
+    color: var(--color-primary);
+    background-color: var(--color-background-light);
+}
+
+/* Tamanhos */
+.btn-sm {
+    min-height: 34px;
+    padding: 6px 12px;
+    font-size: 12px;
+}
+
+.btn-lg {
+    min-height: 52px;
+    padding: 14px 28px;
+    font-size: 16px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* Foco acessível */
+.btn:focus-visible {
+    outline: 3px solid rgba(56, 139, 165, 0.4);
+    outline-offset: 3px;
+}
+
+/* ========================================
+5. CAMPOS DE FORMULÁRIO
+======================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    width: 100%;
+}
+
+.form-label {
+    color: var(--color-primary);
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 14px;
+
+color: var(--color-text);
+    background-color: var(--color-background);
+
+border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+font-family: var(--font-body);
+    font-size: 14px;
+
+transition:
+        border-color var(--transition-default),
+        box-shadow var(--transition-default);
+}
+
+.form-control::placeholder {
+    color: #8296A0;
+}
+
+.form-control:hover {
+    border-color: var(--color-secondary);
+}
+
+.form-control:focus {
+    border-color: var(--color-border-focus);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(56, 139, 165, 0.15);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+select.form-control {
+    cursor: pointer;
+}
+
+.form-hint {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+}
+
+.form-error {
+    color: var(--color-error);
+    font-size: 12px;
+}
+
+.form-control.is-invalid {
+    border-color: var(--color-error);
+}
+
+.form-control.is-invalid:focus {
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+}
+
+/* Checkbox e radio */
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+.form-check input {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--color-secondary);
+}
+
+/* ========================================
+6. CARDS
+======================================== */
+
+.card {
+    padding: var(--spacing-lg);
+    background-color: var(--color-background);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+
+transition:
+        box-shadow var(--transition-default),
+        transform var(--transition-default);
+}
+
+.card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+
+.card-title {
+    margin-bottom: var(--spacing-sm);
+    font-size: 20px;
+}
+
+.card-description {
+    margin-bottom: 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+}
+
+/* ========================================
+7. BADGES E ETIQUETAS
+======================================== */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+width: fit-content;
+    padding: 4px 10px;
+
+border-radius: var(--radius-pill);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.badge-primary {
+    color: var(--color-primary);
+    background-color: var(--color-background-secondary);
+}
+
+.badge-blue {
+    color: #21647A;
+    background-color: #E0F1F6;
+}
+
+.badge-orange {
+    color: #824000;
+    background-color: #FFF0D9;
+}
+
+.badge-success {
+    color: var(--color-success);
+    background-color: var(--color-success-background);
+}
+
+.badge-warning {
+    color: var(--color-warning);
+    background-color: var(--color-warning-background);
+}
+
+.badge-error {
+    color: var(--color-error);
+    background-color: var(--color-error-background);
+}
+
+/* ========================================
+8. MENSAGENS DE FEEDBACK
+======================================== */
+
+.alert {
+    padding: var(--spacing-md);
+    border: 1px solid transparent;
+    border-radius: var(--radius-md);
+    font-size: 14px;
+}
+
+.alert-success {
+    color: var(--color-success);
+    background-color: var(--color-success-background);
+    border-color: #B8E2C8;
+}
+
+.alert-error {
+    color: var(--color-error);
+    background-color: var(--color-error-background);
+    border-color: #F1C2BD;
+}
+
+.alert-warning {
+    color: var(--color-warning);
+    background-color: var(--color-warning-background);
+    border-color: #F0D99A;
+}
+
+.alert-info {
+    color: #21647A;
+    background-color: #E0F1F6;
+    border-color: #B8DDE8;
+}
+
+/* ========================================
+9. TABELAS
+======================================== */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.table th,
+.table td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.table th {
+    color: var(--color-primary);
+    background-color: var(--color-background-light);
+    font-weight: 700;
+}
+
+.table tbody tr:hover {
+    background-color: var(--color-background-light);
+}
+
+.table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* ========================================
+10. UTILITÁRIOS
+======================================== */
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-secondary {
+    color: var(--color-text-secondary);
+}
+
+.text-accent {
+    color: var(--color-accent-hover);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.fw-normal {
+    font-weight: 400;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.mt-1 {
+    margin-top: var(--spacing-sm);
+}
+
+.mt-2 {
+    margin-top: var(--spacing-md);
+}
+
+.mt-3 {
+    margin-top: var(--spacing-lg);
+}
+
+.mb-1 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.mb-3 {
+    margin-bottom: var(--spacing-lg);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* ========================================
+11. RESPONSIVIDADE
+======================================== */
+
+@media (max-width: 768px) {
+    .container {
+        padding-inline: 16px;
+    }
+
+.content-section {
+        padding-block: 40px;
+    }
+
+.section-title {
+        font-size: 28px;
+    }
+
+.card {
+        padding: var(--spacing-md);
+    }
+
+.btn-lg {
+        padding: 12px 20px;
+    }
+}
