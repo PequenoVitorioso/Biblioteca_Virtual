@@ -1,0 +1,50 @@
+/* Cabeçalhos de página e de seção compartilhados. */
+.page-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.page-heading > .page-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  min-height: 24px;
+  margin: 0 0 14px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-family: var(--font-body);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.page-heading > .page-title {
+  width: auto;
+  margin: 0 0 8px;
+  color: var(--color-ink);
+  font-family: var(--font-display);
+  font-size: clamp(32px, 3vw, 42px);
+  font-weight: 700;
+  letter-spacing: -.025em;
+  line-height: 1.12;
+}
+
+.page-heading > .page-subtitle {
+  max-width: 760px;
+  margin: 0;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  .page-heading > .page-title { font-size: 32px; }
+}

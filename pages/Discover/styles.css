@@ -1,0 +1,273 @@
+:root {
+  color-scheme: light;
+  color: var(--color-ink);
+}
+
+main button { font: inherit; }
+
+.content-container {
+  width: min(100%, var(--page-width));
+  margin: 0 auto;
+}
+
+.recommendations {
+  padding: var(--page-top) var(--page-gutter) 96px;
+  background: var(--color-page-background);
+}
+
+.progress-section {
+  padding: 80px var(--page-gutter) 96px;
+  background: var(--color-page-background);
+}
+
+.section-heading { margin-bottom: 44px; }
+
+.section-heading h1,
+.section-heading h2 {
+  margin: 15px 0 9px;
+  font-family: var(--font-display);
+  font-size: clamp(32px, 3vw, 42px);
+  line-height: 1.12;
+  letter-spacing: -.025em;
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.recommendation-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+  background: #fff;
+  box-shadow: 0 9px 24px rgba(12, 41, 61, .035);
+}
+
+.recommendation-visual {
+  height: 210px;
+  overflow: hidden;
+  background: #e2e9ec;
+}
+
+.recommendation-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.recommendation-visual-book {
+  display: grid;
+  place-items: center;
+  background: #f8fafb;
+}
+
+.recommendation-visual-book img {
+  width: 154px;
+  box-shadow: 0 7px 15px rgba(12, 41, 61, .18);
+}
+
+.recommendation-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px 22px 22px;
+}
+
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tags span {
+  padding: 5px 8px;
+  border-radius: 5px;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.recommendation-content h2 {
+  margin: 13px 0 3px;
+  font-family: var(--font-display);
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.recommendation-content .creator {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.recommendation-content .description {
+  margin: 13px 0 18px;
+  color: var(--color-muted);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.add-button,
+.progress-button {
+  border: 0;
+  border-radius: var(--button-radius);
+  background: var(--color-accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background .2s, transform .2s;
+}
+
+.add-button {
+  margin-top: auto;
+  padding: 11px 16px;
+}
+
+.add-button span { margin-left: 6px; font-size: 17px; line-height: 0; }
+.add-button:hover,
+.progress-button:hover { background: var(--color-accent-hover); transform: translateY(-1px); }
+.add-button[aria-pressed="true"] { background: #378ba5; }
+
+.progress-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.progress-card {
+  display: grid;
+  grid-template-columns: 120px minmax(0, 1fr);
+  gap: 24px;
+  min-width: 0;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--card-radius);
+  background: var(--color-card);
+}
+
+.mini-cover {
+  display: grid;
+  place-items: center;
+  min-height: 178px;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 5px 12px rgba(12, 41, 61, .16);
+  text-align: center;
+}
+
+.mini-cover span {
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.05;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, .55);
+}
+
+.mini-cover-book {
+  background: radial-gradient(circle at 58% 30%, #d82b1a 0 16%, transparent 17%),
+    linear-gradient(145deg, transparent 0 45%, #0d0d0d 46% 52%, transparent 53%),
+    linear-gradient(35deg, #070707, #bb180f 52%, #090909);
+}
+
+.mini-cover-book span { font-size: 23px; transform: rotate(-11deg); }
+
+.mini-cover-film {
+  background: radial-gradient(circle at 70% 28%, #f3a366 0 7%, transparent 8%),
+    linear-gradient(145deg, transparent 0 45%, #5d3670 46% 61%, transparent 62%),
+    linear-gradient(25deg, #1a183a, #74407b 57%, #ed805d);
+}
+
+.mini-cover-film span { font-size: 17px; }
+
+.progress-content { min-width: 0; }
+
+.progress-type {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .04em;
+}
+
+.progress-type-reading { color: #398fa9; }
+.progress-type-watching { color: #a83ac0; }
+
+.progress-content h3 {
+  margin: 8px 0 3px;
+  font-family: var(--font-display);
+  font-size: 21px;
+  line-height: 1.2;
+}
+
+.progress-content p {
+  margin: 0 0 18px;
+  color: #718894;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.progress-label strong { color: #398fa9; }
+.progress-card-film .progress-label strong { color: #a83ac0; }
+
+.progress-card progress {
+  display: block;
+  width: 100%;
+  height: 9px;
+  margin: 8px 0 16px;
+  overflow: hidden;
+  border: 0;
+  border-radius: 999px;
+  background: #dce8ed;
+  appearance: none;
+}
+
+.progress-card progress::-webkit-progress-bar { background: #dce8ed; }
+.reading-bar::-webkit-progress-value { background: #398fa9; }
+.movie-bar::-webkit-progress-value { background: #a83ac0; }
+.reading-bar::-moz-progress-bar { background: #398fa9; }
+.movie-bar::-moz-progress-bar { background: #a83ac0; }
+
+.progress-button { padding: 10px 14px; }
+
+main button:focus-visible {
+  outline: 3px solid #82cce0;
+  outline-offset: 3px;
+}
+
+@media (max-width: 900px) {
+  .recommendations,
+  .progress-section { padding: var(--page-top) var(--page-gutter) 64px; }
+  .recommendation-grid { gap: 16px; }
+  .recommendation-content { padding: 18px; }
+  .progress-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+  .recommendations,
+  .progress-section { padding: var(--page-top) var(--page-gutter) 56px; }
+  .section-heading { margin-bottom: 28px; }
+  .recommendation-grid { grid-template-columns: 1fr; }
+  .recommendation-visual { height: 200px; }
+  .progress-card { grid-template-columns: 94px minmax(0, 1fr); gap: 16px; padding: 16px; }
+  .mini-cover { min-height: 152px; }
+  .mini-cover-book span { font-size: 18px; }
+  .mini-cover-film span { font-size: 14px; }
+}

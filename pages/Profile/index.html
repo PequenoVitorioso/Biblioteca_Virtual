@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Perfil | Minha Estante</title>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/navigation_bar.css">
+  <link rel="stylesheet" href="../../css/footer.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../css/page_layout.css">
+  <script src="profile.js" defer></script>
+</head>
+<body>
+  <header class="navigation-bar">
+    <a href="../Home/index.html" class="brand-logo">
+      <span class="logo-icon"><span class="book-symbol">▤</span></span>
+      <span class="brand-name">Minha Estante</span>
+    </a>
+
+    <nav class="nav-links" aria-label="Navegação principal">
+      <a href="../Home/index.html">Início</a>
+      <a href="../Collection/index.html">Minha Coleção</a>
+      <a href="../Discover/index.html">Descobrir</a>
+      <a href="index.html" class="active" aria-current="page">Perfil</a>
+    </nav>
+
+    <div class="search-profile">
+      <label class="search-bar">
+        <span class="search-icon" aria-hidden="true">⌕</span>
+        <input type="search" name="busca" placeholder="Buscar na biblioteca..." aria-label="Buscar na biblioteca">
+      </label>
+      <a href="index.html" class="avatar-wrapper" aria-label="Meu perfil"><span>PV</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="profile-hero">
+      <div class="profile-container page-heading">
+        <span class="eyebrow page-eyebrow">SUA ESTANTE</span>
+        <h1 class="page-title">Seu perfil, suas histórias</h1>
+        <p class="page-subtitle">Um espaço para acompanhar sua coleção e guardar um pouco de quem você é.</p>
+      </div>
+    </section>
+
+    <div class="profile-container profile-layout">
+      <div class="profile-main">
+        <section class="identity-card" aria-labelledby="identity-title">
+          <div class="profile-avatar" aria-hidden="true">PV</div>
+          <div class="identity-text">
+            <span class="small-label">MEU PERFIL</span>
+            <h2 id="identity-title" data-display-name>Seu perfil</h2>
+            <p data-display-bio>Um lugar para reunir as histórias que fazem parte da sua jornada.</p>
+          </div>
+          <a class="edit-link" href="#editar-perfil">Editar perfil</a>
+        </section>
+
+        <section class="dashboard-section" aria-labelledby="collection-title">
+          <div class="section-title-row">
+            <div>
+              <span class="small-label">EM NÚMEROS</span>
+              <h2 id="collection-title">Minha coleção</h2>
+            </div>
+            <a href="../Collection/index.html">Ver coleção <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat-card stat-books"><span class="stat-icon" aria-hidden="true">▤</span><strong>142</strong><span>Livros lidos</span></div>
+            <div class="stat-card stat-films"><span class="stat-icon" aria-hidden="true">▷</span><strong>89</strong><span>Filmes assistidos</span></div>
+            <div class="stat-card stat-wishes"><span class="stat-icon" aria-hidden="true">♡</span><strong>34</strong><span>Na lista de desejos</span></div>
+            <div class="stat-card stat-total"><span class="stat-icon" aria-hidden="true">▣</span><strong>265</strong><span>Itens na coleção</span></div>
+          </div>
+        </section>
+
+        <section class="dashboard-section" aria-labelledby="progress-title">
+          <div class="section-title-row">
+            <div>
+              <span class="small-label">SUA JORNADA</span>
+              <h2 id="progress-title">Em andamento</h2>
+            </div>
+            <a href="../Discover/index.html#progress-title">Ver detalhes <span aria-hidden="true">↗</span></a>
+          </div>
+
+          <div class="activity-list">
+            <article class="activity-card">
+              <div class="activity-symbol reading-symbol" aria-hidden="true">▤</div>
+              <div class="activity-content">
+                <div class="activity-top"><span>LENDO AGORA</span><strong>51%</strong></div>
+                <h3>Quincas Borba</h3>
+                <p>Machado de Assis · Página 164 de 320</p>
+                <div class="activity-track"><span style="width: 51%"></span></div>
+              </div>
+            </article>
+
+            <article class="activity-card">
+              <div class="activity-symbol watching-symbol" aria-hidden="true">▷</div>
+              <div class="activity-content">
+                <div class="activity-top"><span>ASSISTINDO AGORA</span><strong>59%</strong></div>
+                <h3>Branco Sai, Preto Fica</h3>
+                <p>Adirley Queirós · 55 de 93 minutos</p>
+                <div class="activity-track movie-track"><span style="width: 59%"></span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <aside class="profile-side">
+        <section class="edit-panel" id="editar-perfil" aria-labelledby="edit-title">
+          <span class="small-label">DO SEU JEITO</span>
+          <h2 id="edit-title">Personalizar perfil</h2>
+          <p>Escolha como quer aparecer na sua estante.</p>
+
+          <form id="profile-form">
+            <label for="display-name">Nome de exibição</label>
+            <input id="display-name" name="display-name" type="text" maxlength="50" placeholder="Como quer ser chamado(a)?" autocomplete="nickname">
+
+            <label for="profile-bio">Sobre você</label>
+            <textarea id="profile-bio" name="profile-bio" rows="4" maxlength="160" placeholder="Conte um pouco sobre as histórias de que gosta"></textarea>
+
+            <fieldset>
+              <legend>Seus interesses</legend>
+              <div class="interest-grid">
+                <label><input type="checkbox" name="interests" value="Literatura brasileira"><span>Literatura brasileira</span></label>
+                <label><input type="checkbox" name="interests" value="Cinema nacional"><span>Cinema nacional</span></label>
+                <label><input type="checkbox" name="interests" value="Clássicos"><span>Clássicos</span></label>
+                <label><input type="checkbox" name="interests" value="Contos"><span>Contos</span></label>
+                <label><input type="checkbox" name="interests" value="Ficção"><span>Ficção</span></label>
+                <label><input type="checkbox" name="interests" value="Documentários"><span>Documentários</span></label>
+              </div>
+            </fieldset>
+
+            <button type="submit">Salvar perfil</button>
+            <p class="save-status" role="status" aria-live="polite"></p>
+          </form>
+          <p class="storage-note">Os dados do perfil ficam salvos somente neste navegador.</p>
+        </section>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <section class="footer-brand">
+        <a href="../Home/index.html" class="footer-logo"><span class="footer-logo-icon">▤</span><span>Minha Estante</span></a>
+        <p>O espaço acolhedor e definitivo para registrar sua jornada literária e cinematográfica. Desenvolvido por e para apaixonados por histórias.</p>
+      </section>
+      <section class="footer-column">
+        <h3>Explorar</h3>
+        <ul>
+          <li><a href="../Home/index.html">Minha Estante</a></li>
+          <li><a href="../Home/index.html#recentes">Recém Adicionados</a></li>
+          <li><a href="../Discover/index.html">Descobertas</a></li>
+          <li><a href="../Home/index.html#progresso">Metas de Leitura</a></li>
+        </ul>
+      </section>
+      <section class="footer-column">
+        <h3>Comunidade</h3>
+        <ul>
+          <li><a href="#">Clubes do Livro</a></li>
+          <li><a href="#">Desafios Anuais</a></li>
+          <li><a href="#">Fórum de Discussão</a></li>
+          <li><a href="#">Eventos Virtuais</a></li>
+        </ul>
+      </section>
+      <section class="footer-column">
+        <h3>Suporte</h3>
+        <ul>
+          <li><a href="#">Central de Ajuda</a></li>
+          <li><a href="#">Privacidade</a></li>
+          <li><a href="#">Termos de Uso</a></li>
+          <li><a href="#">Contato</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <p>Minha Estante © 2026. Todos os direitos reservados. Feito com amor por leitores.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Twitter">TW</a>
+        <a href="#" aria-label="YouTube">YT</a>
+        <a href="../Collection/index.html" aria-label="Minha coleção">MC</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: 'Manrope', sans-serif;
+    font-family: var(--font-body);
 }
 
 /* Barra de navegação */
@@ -15,14 +15,14 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 80px;
+    padding: 0 var(--page-gutter);
     gap: 32px;
 
     min-height: 80px;
     width: 100%;
 
     background: #FFFFFF;
-    border-bottom: 1px solid #D0E1E8;
+    border-bottom: 1px solid var(--color-border);
 }
 
 /* Logo e nome da biblioteca */
@@ -43,7 +43,7 @@ body {
     width: 36px;
     height: 36px;
 
-    background: #388BA5;
+    background: var(--color-primary);
     border-radius: 8px;
 }
 
@@ -53,12 +53,12 @@ body {
 }
 
 .brand-name {
-    font-family: 'Fraunces', serif;
+    font-family: var(--font-display);
     font-weight: 900;
     font-size: 22px;
     line-height: 27px;
 
-    color: #0C293D;
+    color: var(--color-ink);
 }
 
 /* Links da navegação */
@@ -72,13 +72,13 @@ body {
     font-size: 15px;
     font-weight: 500;
 
-    color: #0C293D;
+    color: var(--color-ink);
     text-decoration: none;
     white-space: nowrap;
 }
 
 .nav-links a.active {
-    color: #388BA5;
+    color: var(--color-primary);
     font-weight: 700;
 }
 
@@ -99,13 +99,13 @@ body {
     height: 40px;
     padding: 10px 16px;
 
-    background: #F4F8FA;
-    border: 1px solid #D0E1E8;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
     border-radius: 10px;
 }
 
 .search-icon {
-    color: #506C7A;
+    color: var(--color-muted);
     font-size: 20px;
 }
 
@@ -117,13 +117,13 @@ body {
     outline: none;
     background: transparent;
 
-    font-family: 'Manrope', sans-serif;
+    font-family: var(--font-body);
     font-size: 14px;
-    color: #0C293D;
+    color: var(--color-ink);
 }
 
 .search-bar input::placeholder {
-    color: #506C7A;
+    color: var(--color-muted);
 }
 
 /* Avatar provisório */
@@ -135,7 +135,8 @@ body {
     width: 40px;
     height: 40px;
 
-    background: #388BA5;
+    background: var(--color-primary);
+
     border-radius: 50%;
 
     color: #FFFFFF;
@@ -149,7 +150,7 @@ body {
 /* Adaptação para telas menores */
 @media (max-width: 1100px) {
     .navigation-bar {
-        padding: 0 24px;
+        padding: 0 var(--page-gutter);
         gap: 20px;
     }
 
@@ -160,4 +161,25 @@ body {
     .search-bar {
         width: 200px;
     }
+}
+
+@media (max-width: 760px) {
+    .navigation-bar {
+        flex-wrap: wrap;
+        padding: 14px var(--page-gutter);
+        gap: 14px;
+    }
+
+    .brand-logo { order: 1; }
+    .search-profile { order: 2; margin-left: auto; }
+    .nav-links { order: 3; width: 100%; }
+}
+
+@media (max-width: 520px) {
+    .navigation-bar { padding: 12px var(--page-gutter); }
+    .brand-logo { width: 100%; }
+    .brand-name { font-size: 19px; }
+    .nav-links { order: 2; flex-wrap: wrap; gap: 16px; }
+    .search-profile { order: 3; width: 100%; margin-left: 0; }
+    .search-bar { flex: 1; width: auto; }
 }

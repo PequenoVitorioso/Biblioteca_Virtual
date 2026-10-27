@@ -1,5 +1,6 @@
 const estilos = [
     "../../css/global.css",
+    "../../css/theme.css",
     "../../css/navigation_bar.css",
     "../../css/footer.css"
 ];
