@@ -1,3 +1,4 @@
+/* Estilos para a seção de Collection */
 :root {
   color-scheme: light;
   font-family: var(--font-body);
@@ -88,15 +89,17 @@ button { font: inherit; }
   border-radius: 13px;
 }
 
-.card-meta,
-.card-bottom {
+.card-meta {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
+  justify-content: flex-start; /* Alinha os itens no início */
+  gap: 8px; /* Espaço uniforme de 8px entre as etiquetas */
+  margin-top: 14px;
 }
 
-.card-meta { margin-top: 14px; }
+.card-meta .rating {
+  margin-left: auto; /* Empurra apenas as estrelas para a extrema direita */
+}
 
 .kind,
 .status {
@@ -111,6 +114,7 @@ button { font: inherit; }
 
 .kind-book { background: #e9f4ff; color: #388ac0; }
 .kind-film { background: #f4e9fb; color: #aa62c7; }
+.kind-standard { background: #f4f4f4; color: #658da0; }
 
 .rating {
   color: #f3a110;
