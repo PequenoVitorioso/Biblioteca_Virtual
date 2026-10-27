@@ -176,17 +176,36 @@ main button { font: inherit; }
 }
 
 .mini-cover-book {
-  background: radial-gradient(circle at 58% 30%, #d82b1a 0 16%, transparent 17%),
-    linear-gradient(145deg, transparent 0 45%, #0d0d0d 46% 52%, transparent 53%),
-    linear-gradient(35deg, #070707, #bb180f 52%, #090909);
+    width: 100%;
+    max-width: 120px;
+    aspect-ratio: 2 / 3;
+    flex-shrink: 0;
+    overflow: hidden;
 }
+
+.mini-cover-book img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
 
 .mini-cover-book span { font-size: 23px; transform: rotate(-11deg); }
 
 .mini-cover-film {
-  background: radial-gradient(circle at 70% 28%, #f3a366 0 7%, transparent 8%),
-    linear-gradient(145deg, transparent 0 45%, #5d3670 46% 61%, transparent 62%),
-    linear-gradient(25deg, #1a183a, #74407b 57%, #ed805d);
+    width: 100%;
+    max-width: 120px;
+    aspect-ratio: 2 / 3;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+.mini-cover-film img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .mini-cover-film span { font-size: 17px; }
