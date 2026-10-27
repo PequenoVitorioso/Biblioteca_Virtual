@@ -4,19 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Minha Estante</title>
-
-  <!-- Carregar folhas de estilo dinamicamente -->
-  <script src="../../js/load-css.js" defer></script>
+  <link rel="stylesheet" href="../../css/theme.css">
+  <link rel="stylesheet" href="../../css/navigation_bar.css">
+  <link rel="stylesheet" href="../../css/footer.css">
   <link rel="stylesheet" href="main.css">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../css/page_layout.css">
 </head>
 <body>
   
   <header class="navigation-bar">
-    <a href="#" class="brand-logo">
+    <a href="index.html" class="brand-logo">
         <span class="logo-icon">
             <span class="book-symbol">▤</span>
         </span>
@@ -24,10 +21,10 @@
         <span class="brand-name">Minha Estante</span>
     </a>
 
-    <nav class="nav-links">
-        <a href="../Home/index.html" class="active">Início</a>
+    <nav class="nav-links" aria-label="Navegação principal">
+        <a href="index.html" class="active" aria-current="page">Início</a>
         <a href="../Collection/index.html">Minha Coleção</a>
-        <!-- <a href="#">Descobrir</a> -->
+        <a href="../Discover/index.html">Descobrir</a>
         <a href="../Profile/index.html">Perfil</a>
     </nav>
 
@@ -41,7 +38,7 @@
             >
         </label>
 
-        <a href="#" class="avatar-wrapper" aria-label="Meu perfil">
+        <a href="../Profile/index.html" class="avatar-wrapper" aria-label="Meu perfil">
             <span>PV</span>
         </a>
     </div>
@@ -56,14 +53,14 @@
 
         <div class="hero-content">
 
-            <div class="hero-intro">
-                <p class="hero-badge">
+            <div class="hero-intro page-heading">
+                <p class="hero-badge page-eyebrow">
                     NOVIDADE: CATALOGAÇÃO DE FILMES &amp; LIVROS JUNTOS
                 </p>
 
-                <h1>Sua biblioteca pessoal, organizada do seu jeito</h1>
+                <h1 class="page-title">Sua biblioteca pessoal, organizada do seu jeito</h1>
 
-                <p class="hero-description">
+                <p class="hero-description page-subtitle">
                     Organize suas leituras, seus filmes favoritos e suas
                     próximas conquistas em um só lugar. Cultive o hábito
                     do consumo consciente e monte sua coleção dos sonhos.
@@ -81,8 +78,10 @@
             </div>
 
             <p class="hero-community">
-                Junte-se a
-                <strong>+12.000 leitores e cinéfilos brasileiros.</strong>
+                <span class="community-avatars" aria-hidden="true">
+                    <span>AM</span><span>LC</span><span>BR</span>
+                </span>
+                <span>Junte-se a <strong>+12.000 leitores e cinéfilos brasileiros.</strong></span>
             </p>
 
         </div>
@@ -160,10 +159,10 @@
     <!-- 3. Obras adicionadas recentemente -->
     <section class="recently-added" id="recentes">
 
-        <header class="section-header">
-            <p class="section-badge">ATIVIDADE RECENTE</p>
-            <h2>Adicionados recentemente</h2>
-            <p class="section-description">
+        <header class="section-header page-heading">
+            <p class="section-badge page-eyebrow">ATIVIDADE RECENTE</p>
+            <h2 class="page-title">Adicionados recentemente</h2>
+            <p class="section-description page-subtitle">
                 As últimas obras que entraram para as estantes da nossa comunidade
             </p>
         </header>
@@ -241,10 +240,10 @@
     <!-- 4. Progresso de consumo -->
     <section class="reading-progress" id="progresso">
 
-        <header class="section-header">
-            <p class="section-badge">EM ANDAMENTO</p>
-            <h2>Progresso de Consumo</h2>
-            <p class="section-description">
+        <header class="section-header page-heading">
+            <p class="section-badge page-eyebrow">EM ANDAMENTO</p>
+            <h2 class="page-title">Progresso de Consumo</h2>
+            <p class="section-description page-subtitle">
                 Acompanhe de perto suas metas literárias e audiovisuais do momento
             </p>
         </header>
@@ -336,7 +335,7 @@
         <!-- Logo e descrição -->
         <section class="footer-brand">
 
-            <a href="#" class="footer-logo">
+            <a href="index.html" class="footer-logo">
                 <span class="footer-logo-icon">▤</span>
                 <span>Minha Estante</span>
             </a>
@@ -354,10 +353,10 @@
             <h3>Explorar</h3>
 
             <ul>
-                <li><a href="#">Minha Estante</a></li>
-                <li><a href="#">Recém Adicionados</a></li>
-                <li><a href="#">Descobertas</a></li>
-                <li><a href="#">Metas de Leitura</a></li>
+                <li><a href="index.html">Minha Estante</a></li>
+                <li><a href="#recentes">Recém Adicionados</a></li>
+                <li><a href="../Discover/index.html">Descobertas</a></li>
+                <li><a href="#progresso">Metas de Leitura</a></li>
             </ul>
         </section>
 
@@ -400,7 +399,7 @@
             <a href="#" aria-label="Instagram">IG</a>
             <a href="#" aria-label="Twitter">TW</a>
             <a href="#" aria-label="YouTube">YT</a>
-            <a href="#" aria-label="Minha coleção">MC</a>
+            <a href="../Collection/index.html" aria-label="Minha coleção">MC</a>
         </div>
 
     </div>
