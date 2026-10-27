@@ -72,7 +72,9 @@ function applyFilters() {
     const matches = item && text.includes(query) &&
       (active === 'all' || (active === 'wishlist' ? item.wished : item.kind === active)) &&
       (category === 'all' || (category === 'wishlist' ? item.wished :
-        category === 'done' ? item.status === 'done' : item.kind === category));
+        category === 'done' ? item.status === 'done' :
+        category === 'drama' ? [...card.querySelectorAll('.kind-standard')].some((tag) => tag.textContent.trim().toLowerCase() === 'drama') :
+        item.kind === category));
     card.hidden = !matches;
     if (matches) visible += 1;
   });
