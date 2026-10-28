@@ -36,29 +36,6 @@
         <input type="search" name="busca" placeholder="Buscar na biblioteca..." aria-label="Buscar na biblioteca">
       </label>
 
-      <div class="filter-controls">
-        <!-- Filtro de Categorias -->
-        <select id="filter-category" aria-label="Filtrar por categoria">
-          <option value="all">Todas as categorias</option>
-          <option value="livro">Livro</option>
-          <option value="contos">Contos</option>
-          <option value="filme">Filme</option>
-          <option value="drama">Drama</option>
-          <option value="clássicos">Clássicos</option>
-          <option value="absurdo">Absurdo</option>
-          <option value="romance">Romance</option>
-          <option value="comédia">Comédia</option>
-          <option value="suspense">Suspense</option>
-        </select>
-
-        <!-- Ordenação -->
-        <select id="filter-sort" aria-label="Ordenar resultados">
-          <option value="default">Ordem padrão</option>
-          <option value="title-asc">Título (A-Z)</option>
-          <option value="title-desc">Título (Z-A)</option>
-        </select>
-      </div>
-
       <a href="../Profile/index.html" class="avatar-wrapper" aria-label="Meu perfil"><span>PV</span></a>
     </div>
   </header>
@@ -70,6 +47,28 @@
           <span class="eyebrow page-eyebrow">RECOMENDADO PARA VOCÊ</span>
           <h1 class="page-title" id="discover-title">Descobrir Citações e Obras</h1>
           <p class="page-subtitle">Recomendações sob medida feitas com base nas suas preferências atuais</p>
+        </div>
+
+        <div class="page-filter-controls">
+          <label for="filter-category">Categoria</label>
+          <select id="filter-category">
+            <option value="all">Todas as categorias</option>
+            <option value="livro">Livro</option>
+            <option value="contos">Contos</option>
+            <option value="filme">Filme</option>
+            <option value="drama">Drama</option>
+            <option value="clássicos">Clássicos</option>
+            <option value="absurdo">Absurdo</option>
+            <option value="romance">Romance</option>
+            <option value="comédia">Comédia</option>
+            <option value="suspense">Suspense</option>
+          </select>
+          <label for="filter-sort">Ordenar</label>
+          <select id="filter-sort">
+            <option value="default">Ordem padrão</option>
+            <option value="title-asc">Título (A–Z)</option>
+            <option value="title-desc">Título (Z–A)</option>
+          </select>
         </div>
 
         <div class="recommendation-grid">

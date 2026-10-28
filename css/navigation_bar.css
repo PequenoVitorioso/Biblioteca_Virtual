@@ -183,31 +183,3 @@ body {
     .search-profile { order: 3; width: 100%; margin-left: 0; }
     .search-bar { flex: 1; width: auto; }
 }
-
-.filter-controls {
-  display: flex;
-  flex-direction: column; /* Empilha os seletores verticalmente */
-  gap: 6px;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  max-width: 280px; /* Ajuste a largura máxima conforme preferir */
-}
-
-.filter-controls select {
-  width: 100%; /* Faz com que ambos ocupem a mesma largura */
-  padding: 6px 10px;
-  border: 1px solid var(--color-border);
-  border-radius: var(--button-radius);
-  background-color: #fff;
-  color: var(--color-ink);
-  font-family: inherit;
-  font-size: 13px;
-  cursor: pointer;
-  transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.filter-controls select:focus-visible {
-  outline: none;
-  border-color: #82cce0;
-  box-shadow: 0 0 0 3px rgba(130, 204, 224, 0.4);
-}

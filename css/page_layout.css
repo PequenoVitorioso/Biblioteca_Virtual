@@ -45,6 +45,33 @@
   line-height: 1.5;
 }
 
+.page-filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin: -22px 0 24px;
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.page-filter-controls select {
+  min-height: 38px;
+  margin-right: 12px;
+  padding: 7px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font: inherit;
+  cursor: pointer;
+}
+
+.page-filter-controls select:focus-visible {
+  outline: 3px solid #82cce0;
+  outline-offset: 2px;
+}
+
 @media (max-width: 700px) {
   .page-heading > .page-title { font-size: 32px; }
 }
